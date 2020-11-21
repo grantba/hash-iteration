@@ -5,7 +5,17 @@
 # suite_d: "Charlie Chaplin", 
 # suite_e: "Crumpet the Elf"
 # }
+#select_winner
+#returns the name of the passenger who stays in suite a and whose name begins with the letter 'A' 
 
 def select_winner(passengers)
-  # add the code snippet here!
+  winner = ""
+  passengers.each do |suite, name|
+    if suite == :suite_a && name.start_with?("A")
+      winner = name
+    return winner
+    end
+  end
 end
+
+
